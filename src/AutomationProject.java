@@ -21,14 +21,13 @@ public class AutomationProject {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4000));
 
-        driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
 
         driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
         driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test");
 
         driver.findElement(By.id("ctl00_MainContent_login_button")).click();
 
-        driver.findElement(By.linkText("Order")).click();
+         driver.findElement(By.linkText("Order")).click();
 
         int quantity = (int)(Math.random() * (100 - 1)) + 1;
 //
@@ -60,15 +59,15 @@ public class AutomationProject {
         driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox5")).sendKeys(fakeUser[4]);
 
 
-        long AmExcard = (long) ((long) 300000000000000l + (Math.random()*99999999999999l));
-        long visacard = (long) ((long) 4000000000000000l + (Math.random()*999999999999999l));
-        long mastcard = (long) ((long) 5000000000000000l + (Math.random()*999999999999999l));
+        long AmExcard = (long) (300000000000000l + (Math.random()*99999999999999l));
+        long visacard = (long) (4000000000000000l + (Math.random()*999999999999999l));
+        long mastcard = (long) (5000000000000000l + (Math.random()*999999999999999l));
 
         String strAmExcard = String.valueOf(AmExcard);
         String strvisacard = String.valueOf(visacard);
         String strmastercard = String.valueOf(mastcard);
 
-        int cardType = randNumber(0,3);
+        int cardType = randNumber(0,2);
 
         if (cardType == 0){
             Thread.sleep(2000);
