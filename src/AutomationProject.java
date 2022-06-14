@@ -67,7 +67,7 @@ public class AutomationProject {
         String strvisacard = String.valueOf(visacard);
         String strmastercard = String.valueOf(mastcard);
 
-        int cardType = randNumber(0,2);
+        int cardType = randNumber(0,3);
 
         if (cardType == 0){
             Thread.sleep(2000);
